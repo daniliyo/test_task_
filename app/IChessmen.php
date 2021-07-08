@@ -2,6 +2,6 @@
 namespace App;
 
 interface IChessmen {
-	public function move($x, $y);
+	public function move(int $x, int $y);
 	public function getPosition();
 }

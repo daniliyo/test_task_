@@ -17,5 +17,5 @@ abstract class AbstractChessmen implements IChessmen {
 		return $data;
 	}
 	
-	abstract public function move($x, $y);
+	abstract public function move(int $x, int $y);
 }
