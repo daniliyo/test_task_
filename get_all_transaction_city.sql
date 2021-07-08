@@ -1,0 +1,1 @@
+SELECT t.transaction_id as 'Id transacion', p.fullname as 'From', p2.fullname as 'To', p.city as 'City' FROM transactions t LEFT JOIN (SELECT p.fullname, p.id, p.city_id, c.name as city FROM persons p LEFT JOIN cities c ON p.city_id = c.id) p ON t.from_person_id = p.id LEFT JOIN (SELECT fullname, id, city_id FROM persons) p2 ON t.to_person_id = p2.id WHERE p.city_id = p2.city_id;
