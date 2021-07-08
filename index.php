@@ -47,9 +47,8 @@
 				url: "engine.php",  
 				data: $(this).serialize(),  
 				success: function(html){ 
-				
 					let resp = JSON.parse(html);
-					if(resp['error'] == true){ 
+					if(resp['error'][0]){ 
 						$("#result").html("Неверная сумма. Выберите "+resp['error']['min']+" или "+resp['error']['max']);
 					} else {
 						$("#result").html("<table id='result-table'><thead><th>Номинал</th><th>Количество</th></thead></table>");
